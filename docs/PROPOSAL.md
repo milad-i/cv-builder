@@ -87,11 +87,3 @@ The hosted mode is the trade-off for being usable by non-technical people. The C
 1. Sends resume (file or text) + JD (text or URL) to the bot.
 2. Bot forwards to the same `POST /eval` endpoint on `apps/server`.
 3. Server returns the result, bot formats it as a Telegram message.
-
-## What I think you may be missing
-
-- **A `templates` package** for resume render templates (React) — separate from `schemas`. Web-ui consumes it now, PDF export consumes it later.
-- **Versioning of archetypes + rubric.** Pin a `rubricVersion` on every eval result so changes are auditable and old runs reproducible.
-- **A `prompts` package** distinct from `intelligence` so the CLI (prompts-only) and server can both depend on the same prompt files.
-- **Observability for eval.** Log every LLM call with prompt hash + rubric version into a local file or sqlite during dev so eval regressions are debuggable.
-

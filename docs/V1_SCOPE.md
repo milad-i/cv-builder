@@ -34,9 +34,3 @@
 - `pnpm eval` runs the golden fixtures in CI and fails on regressions.
 - Every `EvalResult` carries `rubricVersion` and `archetypeVersion`.
 - No LLM response reaches the UI without passing Zod validation.
-
-## Risks to watch
-
-- PDF parsing quality varies wildly — budget time for two library spikes.
-- Claim validation is the highest-value, hardest-to-eval feature. Invest in fixtures early.
-- Telegram + web-ui doubles the surface area. If schedule slips, drop telegram before dropping eval quality.
